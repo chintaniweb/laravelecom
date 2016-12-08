@@ -1,0 +1,42 @@
+/*New CSS add on 06-07-2016*/
+
+.subsubsub{color:#666; font-size:13px; list-style:outside none none; margin:8px 0 0 10px; padding:0; float:left;}
+.subsubsub li{display:inline-block; margin:0; padding:0; white-space:nowrap;}
+.subsubsub a.current{color:#000;}
+.subsubsub a .count, .subsubsub a.current .count{color:#999; font-weight:400;}
+.subsubsub a{line-height:2; padding:0.2em; text-decoration:none;}
+p.search-box{float:right; text-align:right; width:100%; margin:0;}
+.screen-reader-text, .screen-reader-text span, .ui-helper-hidden-accessible{border:0 none; clip:rect(0px, 0px, 0px, 0px); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px; word-wrap:normal !important;}
+.search-box input[name="s"], .tablenav .search-plugins input[name="s"], .tagsdiv .newtag{float:right; width:auto; height:28px; margin:0 4px 0 0;}
+.button{background:#f7f7f7 none repeat scroll 0 0; border-color:#ccc; box-shadow:0 1px 0 #ccc; color:#555; vertical-align:top; float:right;}
+.button{border-radius:3px; border-style:solid; border-width:1px; box-sizing:border-box; cursor:pointer; display:inline-block; font-size:13px; height:28px; line-height:26px; margin:0; padding:0 10px 1px; text-decoration:none; white-space:nowrap; box-shadow:none;}
+.button:hover{background:#fafafa; border-color:#999; color:#23282d;}
+table.widefat{border:1px solid #e5e5e5; box-shadow:0 1px 1px rgba(0, 0, 0, 0.04); font-size:13px;}
+.widefat *{word-wrap:break-word;}
+.widefat ol, .widefat p, .widefat tfoot tr td, .widefat tfoot tr th, .widefat thead tr td, .widefat thead tr th, .widefat ul{color:#32373c;}
+.widefat tfoot td, .widefat tfoot th, .widefat thead td, .widefat thead th, .widget .widget-top{line-height:1.4em;}
+.widefat thead td, .widefat thead th{border-bottom:1px solid #e1e1e1;}
+.widefat tfoot td, .widefat th, .widefat thead td{font-size:14px; line-height:1.3em; text-align:left;}
+.widefat td, .widefat th{padding:8px 10px;}
+.wp-list-table .toggle-row{background:rgba(0, 0, 0, 0) none repeat scroll 0 0; border:medium none; display:none; height:40px; outline:0 none; padding:0; position:absolute; right:8px; top:10px; width:40px;}
+.wp-list-table a{transition:none 0s ease 0s;}
+.widefat a{text-decoration:none;}
+.widefat tfoot td.check-column, .widefat thead td.check-column{padding-top:4px; vertical-align:middle;}
+.plugins tr{background:#fff;}
+.plugins, .plugins td, .plugins th, .row-actions .network_active, .row-actions .network_only{color:#000;}
+.plugins .inactive th.check-column, .plugins tfoot td.check-column, .plugins thead td.check-column{padding-left:6px;}
+#wpbody-content .plugins .plugin-title, #wpbody-content .plugins .theme-title{padding-right:12px; white-space:nowrap;}
+td.plugin-title strong{display:block; font-size:14px; margin-bottom:0.5em;}
+.plugins .row-actions, .plugins .second{padding:0 0 5px;}
+.plugins .row-actions{font-size:13px;}
+.row-actions{color:#000; font-size:13px;}
+.plugin-install #the-list td, .plugins .active td, .plugins .active th, .plugins .inactive td, .plugins .inactive th, .upgrade .plugins td, .upgrade .plugins th{box-shadow:0 -1px 0 rgba(0, 0, 0, 0.1) inset;}
+.plugins .active td, .plugins .active th{background-color:#f7fcfe;}
+.plugins, .plugins td, .plugins th, .row-actions .network_active, .row-actions .network_only{color:#000;}
+.plugins td.desc{line-height:1.5em;}
+.plugins .inactive .plugin-title strong{font-weight:400;}
+.plugins a.delete{color:#a00;}
+.plugins a.delete:hover{color:#f00; text-decoration:none;}
+.plugins .manage-column{padding-left:11px;}
+.plugins .active .plugin-title{border-left:4px solid #5cc3e3;}
+.plugins .inactive .plugin-title{padding-left:11px;}

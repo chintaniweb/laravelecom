@@ -1,0 +1,102 @@
+<div class="form-group">
+                                <!--label class="control-label col-md-4">Show on site starting</label-->
+                                <label class="control-label col-md-4">Start Date</label>
+                                <div class="col-md-7">
+                                    
+                                    <input type="hidden" name="hidden_news_starting" id="hidden_news_starting" value="">
+                                    <div id='news_starting' name="news_starting">&nbsp;</div>
+                                </div>
+                            </div> 
+                            
+                            <div class="form-group">
+                                <!--label class="control-label col-md-4">Story is newsworthy until</label-->
+                                <label class="control-label col-md-4">End Date</label>
+                                <div class="col-md-7">
+                                    <input type="hidden" name="hidden_news_ending" id="hidden_news_ending" value="">
+                                    <div id='news_ending' name="news_ending">&nbsp;</div>
+                                    news item will display as active until 11:59 PM ET of this date
+                                </div>
+                            </div>
+
+<script type="text/javascript" src="<?php echo url('/'); ?>/resources/assets/plugins/jqwidgets/jqxcore.js"></script> 
+<!-- jQWidgets core JavaScript --> 
+<script type="text/javascript" src="<?php echo url('/'); ?>/resources/assets/plugins/jqwidgets/jqxdata.js"></script> 
+<script type="text/javascript" src="<?php echo url('/'); ?>/resources/assets/plugins/jqwidgets/jqxscrollbar.js"></script> 
+<script type="text/javascript" src="<?php echo url('/'); ?>/resources/assets/plugins/jqwidgets/jqxcalendar.js"></script> 
+<script type="text/javascript" src="<?php echo url('/'); ?>/resources/assets/plugins/jqwidgets/jqxdatetimeinput.js"></script> 
+<script type="text/javascript" src="<?php echo url('/'); ?>/resources/assets/plugins/jqwidgets/globalization/globalize.js"></script> 
+<script type="text/javascript" src="<?php echo url('/'); ?>/resources/assets/js/custom.js"></script> 
+
+
+
+<script type="text/javascript">
+                    function myFunction() {
+                        document.getElementById("myForm").submit();
+                    }
+                    var basicDemo = (function () {
+                        //Adding event listeners	
+                        function _addEventListeners() {
+                            $('#showWindowButton').click(function () {
+                                $('#window').jqxWindow('open');
+                            });
+                            $('#hideWindowButton').click(function () {
+                                $('#window').jqxWindow('hide');
+                            });
+                        }
+                        ;
+
+                        //Creating the demo window
+                        function _createWindow() {
+                            var jqxWidget = $('#jqxWidget');
+                            var offset = jqxWidget.offset();
+                            $('#window').jqxWindow({
+                                position: 'center',
+                                //showCollapseButton: true,
+                                autoOpen: false,
+                                isModal: true,
+                                maxHeight: 400,
+                                maxWidth: 700,
+                                minHeight: 200,
+                                minWidth: 200,
+                                width: '100%',
+                                resizable: false,
+                                draggable: false,
+                                initContent: function () {
+                                    $('#window').jqxWindow('focus');
+                                }
+                            });
+                        }
+                        ;
+                        return {
+                            config: {
+                                dragArea: null
+                            },
+                            init: function () {
+                                //Attaching event listeners
+                                _addEventListeners();
+                                //Adding jqxWindow
+                                _createWindow();
+                            }
+                        };
+                    }());
+                    $(document).ready(function () {
+                        $("#tab2").click(function () {
+                            $("#tab-description2").slideToggle();
+                            $("#tab1").toggleClass("top-btn-hide");
+                            $("#tab2 .fa").toggleClass("fa-angle-double-up");
+                            $("#tab2 .fa").toggleClass("fa-angle-double-down");
+                        });
+
+                        //get value from PHP - hidden element
+                        hidden_on_starting_date = $("#hidden_news_starting").val();
+                        hidden_on_ending_date = $("#hidden_news_ending").val();
+
+                        //set updated date
+                        if (hidden_on_starting_date != "01/01/1970")
+                            $('#news_starting').jqxDateTimeInput('setDate', hidden_on_starting_date);
+                        if (hidden_on_ending_date != "01/01/1970")
+                            $('#news_ending').jqxDateTimeInput('setDate', hidden_on_ending_date);
+                    });
+                    $("#news_starting").jqxDateTimeInput({width: '300px', height: '30px', formatString: ""})
+                    $("#news_ending").jqxDateTimeInput({width: '300px', height: '30px', formatString: ""})
+</script>
